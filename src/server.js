@@ -33,8 +33,5 @@ app.use(express.json());
 app.use(cors());
 app.use(`/.netlify/functions/server`, router);
 
-// app.listen(process.env.PORT || 8080, () => {
-// 	console.log("listening on port 8080");
-// });
 module.exports = app;
 module.exports.handler = serverless(app);
